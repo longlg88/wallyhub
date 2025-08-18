@@ -1,0 +1,13 @@
+{
+  "firebase": {
+    "enabled": true,
+    "autoInitialize": true
+  },
+  "development": {
+    "showDebugInfo": true
+  },
+  "app": {
+    "version": "1.0.0",
+    "environment": "development"
+  }
+}

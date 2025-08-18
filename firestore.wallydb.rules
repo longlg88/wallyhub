@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/wallydb/documents {
+    // 이메일 인증 문서는 서버에서만 읽기/쓰기 가능
+    match /email_verifications/{email} {
+      allow read, write: if false;
+    }
+    
+    // 사용자 문서는 인증된 사용자만 접근
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // 기타 컬렉션들...
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

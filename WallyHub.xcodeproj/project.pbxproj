@@ -1,0 +1,1063 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001 /* WallyHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002 /* WallyHubApp.swift */; };
+		043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044 /* Assets.xcassets */; };
+		045 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046 /* GoogleService-Info.plist */; };
+		051 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 052 /* RIBs */; };
+		053 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 054 /* FirebaseAuth */; };
+		055 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 056 /* FirebaseFirestore */; };
+		057 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 058 /* FirebaseStorage */; };
+		7FC313C32E52B9010025A702 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC313C42E52B9010025A702 /* FirebaseRemoteConfig */; };
+		7FB362342E4D49370088852E /* ModernActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362332E4D49370088852E /* ModernActionCard.swift */; };
+		7FB3623F2E4D53C40088852E /* BoardJoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362372E4D53C40088852E /* BoardJoinRouter.swift */; };
+		7FB362402E4D53C40088852E /* MyParticipationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3623C2E4D53C40088852E /* MyParticipationsRouter.swift */; };
+		7FB362412E4D53C40088852E /* MyParticipationsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3623A2E4D53C40088852E /* MyParticipationsBuilder.swift */; };
+		7FB362422E4D53C40088852E /* MyParticipationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3623D2E4D53C40088852E /* MyParticipationsViewController.swift */; };
+		7FB362432E4D53C40088852E /* BoardJoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362362E4D53C40088852E /* BoardJoinInteractor.swift */; };
+		7FB362442E4D53C40088852E /* MyParticipationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3623B2E4D53C40088852E /* MyParticipationsInteractor.swift */; };
+		7FB362452E4D53C40088852E /* BoardJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362382E4D53C40088852E /* BoardJoinViewController.swift */; };
+		7FB362462E4D53C40088852E /* BoardJoinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362352E4D53C40088852E /* BoardJoinBuilder.swift */; };
+		7FB362492E4D627C0088852E /* ModernLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362482E4D627C0088852E /* ModernLoadingView.swift */; };
+		7FB3624A2E4D627C0088852E /* ModernErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB362472E4D627C0088852E /* ModernErrorView.swift */; };
+		7FC313BA2E52B6AC0025A702 /* RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC313B92E52B6AC0025A702 /* RemoteConfigService.swift */; };
+		7FC313BE2E52B86D0025A702 /* RemoteConfigDebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC313BC2E52B86D0025A702 /* RemoteConfigDebugHelper.swift */; };
+		7FC313BF2E52B86D0025A702 /* EnvironmentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC313BB2E52B86D0025A702 /* EnvironmentLoader.swift */; };
+		7FC313C02E52B86D0025A702 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC313BD2E52B86D0025A702 /* SwiftUIExtensions.swift */; };
+		7FC313C22E52B8BD0025A702 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC313C12E52B8BD0025A702 /* AuthenticationService.swift */; };
+		7FCAD9622E4C471400716B40 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9572E4C471400716B40 /* UserRole.swift */; };
+		7FCAD9632E4C471400716B40 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9602E4C471400716B40 /* ConfigurationManager.swift */; };
+		7FCAD9642E4C471400716B40 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9542E4C471400716B40 /* Photo.swift */; };
+		7FCAD9652E4C471400716B40 /* RoleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9502E4C471400716B40 /* RoleCard.swift */; };
+		7FCAD9662E4C471400716B40 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD95D2E4C471400716B40 /* ServiceFactory.swift */; };
+		7FCAD9672E4C471400716B40 /* WallyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9582E4C471400716B40 /* WallyError.swift */; };
+		7FCAD9682E4C471400716B40 /* StudentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD95E2E4C471400716B40 /* StudentService.swift */; };
+		7FCAD9692E4C471400716B40 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD95A2E4C471400716B40 /* AuthenticationService.swift */; };
+		7FCAD96A2E4C471400716B40 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD95C2E4C471400716B40 /* PhotoService.swift */; };
+		7FCAD96B2E4C471400716B40 /* BoardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD95B2E4C471400716B40 /* BoardService.swift */; };
+		7FCAD96C2E4C471400716B40 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9562E4C471400716B40 /* Teacher.swift */; };
+		7FCAD96D2E4C471400716B40 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9552E4C471400716B40 /* Student.swift */; };
+		7FCAD96E2E4C471400716B40 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9532E4C471400716B40 /* Board.swift */; };
+		7FCAD96F2E4C471400716B40 /* Administrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9522E4C471400716B40 /* Administrator.swift */; };
+		7FCAD9842E4C474000716B40 /* SystemDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9772E4C474000716B40 /* SystemDashboardRouter.swift */; };
+		7FCAD9852E4C474000716B40 /* AdminBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD97F2E4C474000716B40 /* AdminBuilder.swift */; };
+		7FCAD9862E4C474000716B40 /* AllBoardsManagementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9722E4C474000716B40 /* AllBoardsManagementRouter.swift */; };
+		7FCAD9872E4C474000716B40 /* AllBoardsManagementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9712E4C474000716B40 /* AllBoardsManagementInteractor.swift */; };
+		7FCAD9882E4C474000716B40 /* AdminRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9812E4C474000716B40 /* AdminRouter.swift */; };
+		7FCAD9892E4C474000716B40 /* AdminInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9802E4C474000716B40 /* AdminInteractor.swift */; };
+		7FCAD98A2E4C474000716B40 /* AllBoardsManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9732E4C474000716B40 /* AllBoardsManagementViewController.swift */; };
+		7FCAD98B2E4C474000716B40 /* SystemDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9762E4C474000716B40 /* SystemDashboardInteractor.swift */; };
+		7FCAD98C2E4C474000716B40 /* UserManagementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD97C2E4C474000716B40 /* UserManagementRouter.swift */; };
+		7FCAD98D2E4C474000716B40 /* AllBoardsManagementBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9702E4C474000716B40 /* AllBoardsManagementBuilder.swift */; };
+		7FCAD98E2E4C474000716B40 /* SystemDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9782E4C474000716B40 /* SystemDashboardViewController.swift */; };
+		7FCAD98F2E4C474000716B40 /* SystemDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9752E4C474000716B40 /* SystemDashboardBuilder.swift */; };
+		7FCAD9902E4C474000716B40 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9822E4C474000716B40 /* AdminViewController.swift */; };
+		7FCAD9912E4C474000716B40 /* UserManagementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD97B2E4C474000716B40 /* UserManagementInteractor.swift */; };
+		7FCAD9922E4C474000716B40 /* UserManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD97D2E4C474000716B40 /* UserManagementViewController.swift */; };
+		7FCAD9932E4C474000716B40 /* UserManagementBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD97A2E4C474000716B40 /* UserManagementBuilder.swift */; };
+		7FCAD9E32E4C475400716B40 /* StudentLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A02E4C475400716B40 /* StudentLoginRouter.swift */; };
+		7FCAD9E42E4C475400716B40 /* MyPhotosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9B62E4C475400716B40 /* MyPhotosBuilder.swift */; };
+		7FCAD9E52E4C475400716B40 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C32E4C475400716B40 /* QRScannerViewController.swift */; };
+		7FCAD9E62E4C475400716B40 /* BoardCreationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9CA2E4C475400716B40 /* BoardCreationBuilder.swift */; };
+		7FCAD9E72E4C475400716B40 /* BoardSettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9CF2E4C475400716B40 /* BoardSettingsBuilder.swift */; };
+		7FCAD9E82E4C475400716B40 /* PhotoModerationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D42E4C475400716B40 /* PhotoModerationBuilder.swift */; };
+		7FCAD9E92E4C475400716B40 /* TeacherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9E02E4C475400716B40 /* TeacherRouter.swift */; };
+		7FCAD9EA2E4C475400716B40 /* PhotoUploadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9BD2E4C475400716B40 /* PhotoUploadRouter.swift */; };
+		7FCAD9EB2E4C475400716B40 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9AF2E4C475400716B40 /* RootViewController.swift */; };
+		7FCAD9EC2E4C475400716B40 /* PhotoModerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D72E4C475400716B40 /* PhotoModerationViewController.swift */; };
+		7FCAD9ED2E4C475400716B40 /* QRScannerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C02E4C475400716B40 /* QRScannerBuilder.swift */; };
+		7FCAD9EE2E4C475400716B40 /* BoardSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D12E4C475400716B40 /* BoardSettingsRouter.swift */; };
+		7FCAD9EF2E4C475400716B40 /* BoardSettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D02E4C475400716B40 /* BoardSettingsInteractor.swift */; };
+		7FCAD9F02E4C475400716B40 /* RoleSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD99B2E4C475400716B40 /* RoleSelectionRouter.swift */; };
+		7FCAD9F12E4C475400716B40 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9AE2E4C475400716B40 /* RootRouter.swift */; };
+		7FCAD9F22E4C475400716B40 /* RoleSelectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9992E4C475400716B40 /* RoleSelectionBuilder.swift */; };
+		7FCAD9F32E4C475400716B40 /* StudentManagementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9DA2E4C475400716B40 /* StudentManagementInteractor.swift */; };
+		7FCAD9F42E4C475400716B40 /* MyPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9B92E4C475400716B40 /* MyPhotosViewController.swift */; };
+		7FCAD9F62E4C475400716B40 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9942E4C475400716B40 /* LoginBuilder.swift */; };
+		7FCAD9F72E4C475400716B40 /* QRScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C12E4C475400716B40 /* QRScannerInteractor.swift */; };
+		7FCAD9F82E4C475400716B40 /* RoleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD99C2E4C475400716B40 /* RoleSelectionViewController.swift */; };
+		7FCAD9F92E4C475400716B40 /* StudentManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9DC2E4C475400716B40 /* StudentManagementViewController.swift */; };
+		7FCAD9FA2E4C475400716B40 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A42E4C475400716B40 /* AuthInteractor.swift */; };
+		7FCAD9FB2E4C475400716B40 /* BoardCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9CD2E4C475400716B40 /* BoardCreationViewController.swift */; };
+		7FCAD9FC2E4C475400716B40 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9E12E4C475400716B40 /* TeacherViewController.swift */; };
+		7FCAD9FE2E4C475400716B40 /* BoardCreationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9CC2E4C475400716B40 /* BoardCreationRouter.swift */; };
+		7FCAD9FF2E4C475400716B40 /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A12E4C475400716B40 /* StudentLoginViewController.swift */; };
+		7FCADA002E4C475400716B40 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9AD2E4C475400716B40 /* RootInteractor.swift */; };
+		7FCADA012E4C475400716B40 /* TeacherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9DF2E4C475400716B40 /* TeacherInteractor.swift */; };
+		7FCADA022E4C475400716B40 /* PhotoUploadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9BB2E4C475400716B40 /* PhotoUploadBuilder.swift */; };
+		7FCADA032E4C475400716B40 /* StudentLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD99F2E4C475400716B40 /* StudentLoginInteractor.swift */; };
+		7FCADA042E4C475400716B40 /* StudentManagementBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D92E4C475400716B40 /* StudentManagementBuilder.swift */; };
+		7FCADA052E4C475400716B40 /* StudentManagementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9DB2E4C475400716B40 /* StudentManagementRouter.swift */; };
+		7FCADA062E4C475400716B40 /* MyPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9B72E4C475400716B40 /* MyPhotosInteractor.swift */; };
+		7FCADA082E4C475400716B40 /* QRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C22E4C475400716B40 /* QRScannerRouter.swift */; };
+		7FCADA092E4C475400716B40 /* PhotoModerationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D62E4C475400716B40 /* PhotoModerationRouter.swift */; };
+		7FCADA0A2E4C475400716B40 /* StudentLoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD99E2E4C475400716B40 /* StudentLoginBuilder.swift */; };
+		7FCADA0B2E4C475400716B40 /* BoardSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D22E4C475400716B40 /* BoardSettingsViewController.swift */; };
+		7FCADA0C2E4C475400716B40 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9952E4C475400716B40 /* LoginInteractor.swift */; };
+		7FCADA0D2E4C475400716B40 /* PhotoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9BE2E4C475400716B40 /* PhotoUploadViewController.swift */; };
+		7FCADA0E2E4C475400716B40 /* PhotoUploadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9BC2E4C475400716B40 /* PhotoUploadInteractor.swift */; };
+		7FCADA0F2E4C475400716B40 /* StudentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C62E4C475400716B40 /* StudentInteractor.swift */; };
+		7FCADA102E4C475400716B40 /* MyPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9B82E4C475400716B40 /* MyPhotosRouter.swift */; };
+		7FCADA112E4C475400716B40 /* RoleSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD99A2E4C475400716B40 /* RoleSelectionInteractor.swift */; };
+		7FCADA132E4C475400716B40 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A62E4C475400716B40 /* AuthViewController.swift */; };
+		7FCADA142E4C475400716B40 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A52E4C475400716B40 /* AuthRouter.swift */; };
+		7FCADA152E4C475400716B40 /* StudentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C52E4C475400716B40 /* StudentBuilder.swift */; };
+		7FCADA162E4C475400716B40 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9962E4C475400716B40 /* LoginRouter.swift */; };
+		7FCADA172E4C475400716B40 /* AuthBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A32E4C475400716B40 /* AuthBuilder.swift */; };
+		7FCADA182E4C475400716B40 /* BoardCreationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9CB2E4C475400716B40 /* BoardCreationInteractor.swift */; };
+		7FCADA192E4C475400716B40 /* TeacherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9DE2E4C475400716B40 /* TeacherBuilder.swift */; };
+		7FCADA1A2E4C475400716B40 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9AC2E4C475400716B40 /* RootBuilder.swift */; };
+		7FCADA1B2E4C475400716B40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9972E4C475400716B40 /* LoginViewController.swift */; };
+		7FCADA1C2E4C475400716B40 /* StudentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C72E4C475400716B40 /* StudentRouter.swift */; };
+		7FCADA1D2E4C475400716B40 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9C82E4C475400716B40 /* StudentViewController.swift */; };
+		7FCADA1E2E4C475400716B40 /* PhotoModerationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAD9D52E4C475400716B40 /* PhotoModerationInteractor.swift */; };
+		7FCADA1F2E4C475400716B40 /* AppConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FCAD9A92E4C475400716B40 /* AppConfig.json */; };
+		7FCADA202E4C475400716B40 /* firestore.indexes.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FCAD9AA2E4C475400716B40 /* firestore.indexes.json */; };
+		7FCCF6592E5206330017B882 /* PhotoViewTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCF6582E5206330017B882 /* PhotoViewTracking.swift */; };
+		7FCCF65B2E5206470017B882 /* PhotoViewTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCF65A2E5206470017B882 /* PhotoViewTrackingService.swift */; };
+		7FCCF65D2E5208000017B882 /* PhotoStatusIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCF65C2E5208000017B882 /* PhotoStatusIndicator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		002 /* WallyHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallyHubApp.swift; sourceTree = "<group>"; };
+		044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		048 /* AppConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppConfig.json; sourceTree = "<group>"; };
+		050 /* firestore.indexes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = firestore.indexes.json; sourceTree = "<group>"; };
+		059 /* WallyHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallyHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB362332E4D49370088852E /* ModernActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernActionCard.swift; sourceTree = "<group>"; };
+		7FB362352E4D53C40088852E /* BoardJoinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardJoinBuilder.swift; sourceTree = "<group>"; };
+		7FB362362E4D53C40088852E /* BoardJoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardJoinInteractor.swift; sourceTree = "<group>"; };
+		7FB362372E4D53C40088852E /* BoardJoinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardJoinRouter.swift; sourceTree = "<group>"; };
+		7FB362382E4D53C40088852E /* BoardJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardJoinViewController.swift; sourceTree = "<group>"; };
+		7FB3623A2E4D53C40088852E /* MyParticipationsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationsBuilder.swift; sourceTree = "<group>"; };
+		7FB3623B2E4D53C40088852E /* MyParticipationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationsInteractor.swift; sourceTree = "<group>"; };
+		7FB3623C2E4D53C40088852E /* MyParticipationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationsRouter.swift; sourceTree = "<group>"; };
+		7FB3623D2E4D53C40088852E /* MyParticipationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationsViewController.swift; sourceTree = "<group>"; };
+		7FB362472E4D627C0088852E /* ModernErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernErrorView.swift; sourceTree = "<group>"; };
+		7FB362482E4D627C0088852E /* ModernLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernLoadingView.swift; sourceTree = "<group>"; };
+		7FC313B92E52B6AC0025A702 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
+		7FC313BB2E52B86D0025A702 /* EnvironmentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLoader.swift; sourceTree = "<group>"; };
+		7FC313BC2E52B86D0025A702 /* RemoteConfigDebugHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigDebugHelper.swift; sourceTree = "<group>"; };
+		7FC313BD2E52B86D0025A702 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
+		7FC313C12E52B8BD0025A702 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		7FCAD9502E4C471400716B40 /* RoleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCard.swift; sourceTree = "<group>"; };
+		7FCAD9522E4C471400716B40 /* Administrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Administrator.swift; sourceTree = "<group>"; };
+		7FCAD9532E4C471400716B40 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7FCAD9542E4C471400716B40 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7FCAD9552E4C471400716B40 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		7FCAD9562E4C471400716B40 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		7FCAD9572E4C471400716B40 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
+		7FCAD9582E4C471400716B40 /* WallyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallyError.swift; sourceTree = "<group>"; };
+		7FCAD95A2E4C471400716B40 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		7FCAD95B2E4C471400716B40 /* BoardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardService.swift; sourceTree = "<group>"; };
+		7FCAD95C2E4C471400716B40 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		7FCAD95D2E4C471400716B40 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		7FCAD95E2E4C471400716B40 /* StudentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentService.swift; sourceTree = "<group>"; };
+		7FCAD9602E4C471400716B40 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		7FCAD9702E4C474000716B40 /* AllBoardsManagementBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBoardsManagementBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9712E4C474000716B40 /* AllBoardsManagementInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBoardsManagementInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9722E4C474000716B40 /* AllBoardsManagementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBoardsManagementRouter.swift; sourceTree = "<group>"; };
+		7FCAD9732E4C474000716B40 /* AllBoardsManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBoardsManagementViewController.swift; sourceTree = "<group>"; };
+		7FCAD9752E4C474000716B40 /* SystemDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDashboardBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9762E4C474000716B40 /* SystemDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDashboardInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9772E4C474000716B40 /* SystemDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDashboardRouter.swift; sourceTree = "<group>"; };
+		7FCAD9782E4C474000716B40 /* SystemDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDashboardViewController.swift; sourceTree = "<group>"; };
+		7FCAD97A2E4C474000716B40 /* UserManagementBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementBuilder.swift; sourceTree = "<group>"; };
+		7FCAD97B2E4C474000716B40 /* UserManagementInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementInteractor.swift; sourceTree = "<group>"; };
+		7FCAD97C2E4C474000716B40 /* UserManagementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementRouter.swift; sourceTree = "<group>"; };
+		7FCAD97D2E4C474000716B40 /* UserManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementViewController.swift; sourceTree = "<group>"; };
+		7FCAD97F2E4C474000716B40 /* AdminBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9802E4C474000716B40 /* AdminInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9812E4C474000716B40 /* AdminRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRouter.swift; sourceTree = "<group>"; };
+		7FCAD9822E4C474000716B40 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		7FCAD9942E4C475400716B40 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9952E4C475400716B40 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9962E4C475400716B40 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		7FCAD9972E4C475400716B40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FCAD9992E4C475400716B40 /* RoleSelectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionBuilder.swift; sourceTree = "<group>"; };
+		7FCAD99A2E4C475400716B40 /* RoleSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionInteractor.swift; sourceTree = "<group>"; };
+		7FCAD99B2E4C475400716B40 /* RoleSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionRouter.swift; sourceTree = "<group>"; };
+		7FCAD99C2E4C475400716B40 /* RoleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionViewController.swift; sourceTree = "<group>"; };
+		7FCAD99E2E4C475400716B40 /* StudentLoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginBuilder.swift; sourceTree = "<group>"; };
+		7FCAD99F2E4C475400716B40 /* StudentLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9A02E4C475400716B40 /* StudentLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginRouter.swift; sourceTree = "<group>"; };
+		7FCAD9A12E4C475400716B40 /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
+		7FCAD9A32E4C475400716B40 /* AuthBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9A42E4C475400716B40 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9A52E4C475400716B40 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		7FCAD9A62E4C475400716B40 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7FCAD9A92E4C475400716B40 /* AppConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppConfig.json; sourceTree = "<group>"; };
+		7FCAD9AA2E4C475400716B40 /* firestore.indexes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = firestore.indexes.json; sourceTree = "<group>"; };
+		7FCAD9AC2E4C475400716B40 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9AD2E4C475400716B40 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9AE2E4C475400716B40 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		7FCAD9AF2E4C475400716B40 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		7FCAD9B62E4C475400716B40 /* MyPhotosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotosBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9B72E4C475400716B40 /* MyPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotosInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9B82E4C475400716B40 /* MyPhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotosRouter.swift; sourceTree = "<group>"; };
+		7FCAD9B92E4C475400716B40 /* MyPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotosViewController.swift; sourceTree = "<group>"; };
+		7FCAD9BB2E4C475400716B40 /* PhotoUploadBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9BC2E4C475400716B40 /* PhotoUploadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9BD2E4C475400716B40 /* PhotoUploadRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadRouter.swift; sourceTree = "<group>"; };
+		7FCAD9BE2E4C475400716B40 /* PhotoUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadViewController.swift; sourceTree = "<group>"; };
+		7FCAD9C02E4C475400716B40 /* QRScannerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9C12E4C475400716B40 /* QRScannerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9C22E4C475400716B40 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
+		7FCAD9C32E4C475400716B40 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		7FCAD9C52E4C475400716B40 /* StudentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9C62E4C475400716B40 /* StudentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9C72E4C475400716B40 /* StudentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRouter.swift; sourceTree = "<group>"; };
+		7FCAD9C82E4C475400716B40 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		7FCAD9CA2E4C475400716B40 /* BoardCreationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCreationBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9CB2E4C475400716B40 /* BoardCreationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCreationInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9CC2E4C475400716B40 /* BoardCreationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCreationRouter.swift; sourceTree = "<group>"; };
+		7FCAD9CD2E4C475400716B40 /* BoardCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCreationViewController.swift; sourceTree = "<group>"; };
+		7FCAD9CF2E4C475400716B40 /* BoardSettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSettingsBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9D02E4C475400716B40 /* BoardSettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSettingsInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9D12E4C475400716B40 /* BoardSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSettingsRouter.swift; sourceTree = "<group>"; };
+		7FCAD9D22E4C475400716B40 /* BoardSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSettingsViewController.swift; sourceTree = "<group>"; };
+		7FCAD9D42E4C475400716B40 /* PhotoModerationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModerationBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9D52E4C475400716B40 /* PhotoModerationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModerationInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9D62E4C475400716B40 /* PhotoModerationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModerationRouter.swift; sourceTree = "<group>"; };
+		7FCAD9D72E4C475400716B40 /* PhotoModerationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModerationViewController.swift; sourceTree = "<group>"; };
+		7FCAD9D92E4C475400716B40 /* StudentManagementBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManagementBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9DA2E4C475400716B40 /* StudentManagementInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManagementInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9DB2E4C475400716B40 /* StudentManagementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManagementRouter.swift; sourceTree = "<group>"; };
+		7FCAD9DC2E4C475400716B40 /* StudentManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManagementViewController.swift; sourceTree = "<group>"; };
+		7FCAD9DE2E4C475400716B40 /* TeacherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherBuilder.swift; sourceTree = "<group>"; };
+		7FCAD9DF2E4C475400716B40 /* TeacherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherInteractor.swift; sourceTree = "<group>"; };
+		7FCAD9E02E4C475400716B40 /* TeacherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRouter.swift; sourceTree = "<group>"; };
+		7FCAD9E12E4C475400716B40 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
+		7FCCF6582E5206330017B882 /* PhotoViewTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewTracking.swift; sourceTree = "<group>"; };
+		7FCCF65A2E5206470017B882 /* PhotoViewTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewTrackingService.swift; sourceTree = "<group>"; };
+		7FCCF65C2E5208000017B882 /* PhotoStatusIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStatusIndicator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051 /* RIBs in Frameworks */,
+				053 /* FirebaseAuth in Frameworks */,
+				055 /* FirebaseFirestore in Frameworks */,
+				057 /* FirebaseStorage in Frameworks */,
+				7FC313C32E52B9010025A702 /* FirebaseRemoteConfig in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062 = {
+			isa = PBXGroup;
+			children = (
+				063 /* WallyHub */,
+				064 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		063 /* WallyHub */ = {
+			isa = PBXGroup;
+			children = (
+				060 /* Info.plist */,
+				002 /* WallyHubApp.swift */,
+				044 /* Assets.xcassets */,
+				7FCAD9832E4C474000716B40 /* AdminRIB */,
+				7FCAD9A72E4C475400716B40 /* AuthRIB */,
+				7FCAD9AB2E4C475400716B40 /* Resources */,
+				072 /* Resources */,
+				7FCAD9B02E4C475400716B40 /* RootRIB */,
+				070 /* Shared */,
+				7FCAD9C92E4C475400716B40 /* StudentRIB */,
+				071 /* Supporting Files */,
+				7FCAD9E22E4C475400716B40 /* TeacherRIB */,
+			);
+			path = WallyHub;
+			sourceTree = "<group>";
+		};
+		064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				059 /* WallyHub.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		070 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9512E4C471400716B40 /* Components */,
+				7FCAD9592E4C471400716B40 /* Models */,
+				7FCAD95F2E4C471400716B40 /* Services */,
+				7FCAD9612E4C471400716B40 /* Utils */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		071 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				046 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		072 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				048 /* AppConfig.json */,
+				050 /* firestore.indexes.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7FB362392E4D53C40088852E /* BoardJoinRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FB362352E4D53C40088852E /* BoardJoinBuilder.swift */,
+				7FB362362E4D53C40088852E /* BoardJoinInteractor.swift */,
+				7FB362372E4D53C40088852E /* BoardJoinRouter.swift */,
+				7FB362382E4D53C40088852E /* BoardJoinViewController.swift */,
+			);
+			path = BoardJoinRIB;
+			sourceTree = "<group>";
+		};
+		7FB3623E2E4D53C40088852E /* MyParticipationsRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3623A2E4D53C40088852E /* MyParticipationsBuilder.swift */,
+				7FB3623B2E4D53C40088852E /* MyParticipationsInteractor.swift */,
+				7FB3623C2E4D53C40088852E /* MyParticipationsRouter.swift */,
+				7FB3623D2E4D53C40088852E /* MyParticipationsViewController.swift */,
+			);
+			path = MyParticipationsRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9512E4C471400716B40 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCF65C2E5208000017B882 /* PhotoStatusIndicator.swift */,
+				7FB362472E4D627C0088852E /* ModernErrorView.swift */,
+				7FB362482E4D627C0088852E /* ModernLoadingView.swift */,
+				7FB362332E4D49370088852E /* ModernActionCard.swift */,
+				7FCAD9502E4C471400716B40 /* RoleCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7FCAD9592E4C471400716B40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCF6582E5206330017B882 /* PhotoViewTracking.swift */,
+				7FCAD9522E4C471400716B40 /* Administrator.swift */,
+				7FCAD9532E4C471400716B40 /* Board.swift */,
+				7FCAD9542E4C471400716B40 /* Photo.swift */,
+				7FCAD9552E4C471400716B40 /* Student.swift */,
+				7FCAD9562E4C471400716B40 /* Teacher.swift */,
+				7FCAD9572E4C471400716B40 /* UserRole.swift */,
+				7FCAD9582E4C471400716B40 /* WallyError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FCAD95F2E4C471400716B40 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7FC313C12E52B8BD0025A702 /* AuthenticationService.swift */,
+				7FC313B92E52B6AC0025A702 /* RemoteConfigService.swift */,
+				7FCCF65A2E5206470017B882 /* PhotoViewTrackingService.swift */,
+				7FCAD95A2E4C471400716B40 /* AuthenticationService.swift */,
+				7FCAD95B2E4C471400716B40 /* BoardService.swift */,
+				7FCAD95C2E4C471400716B40 /* PhotoService.swift */,
+				7FCAD95D2E4C471400716B40 /* ServiceFactory.swift */,
+				7FCAD95E2E4C471400716B40 /* StudentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7FCAD9612E4C471400716B40 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7FC313BB2E52B86D0025A702 /* EnvironmentLoader.swift */,
+				7FC313BC2E52B86D0025A702 /* RemoteConfigDebugHelper.swift */,
+				7FC313BD2E52B86D0025A702 /* SwiftUIExtensions.swift */,
+				7FCAD9602E4C471400716B40 /* ConfigurationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7FCAD9742E4C474000716B40 /* AllBoardsManagementRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9702E4C474000716B40 /* AllBoardsManagementBuilder.swift */,
+				7FCAD9712E4C474000716B40 /* AllBoardsManagementInteractor.swift */,
+				7FCAD9722E4C474000716B40 /* AllBoardsManagementRouter.swift */,
+				7FCAD9732E4C474000716B40 /* AllBoardsManagementViewController.swift */,
+			);
+			path = AllBoardsManagementRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9792E4C474000716B40 /* SystemDashboardRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9752E4C474000716B40 /* SystemDashboardBuilder.swift */,
+				7FCAD9762E4C474000716B40 /* SystemDashboardInteractor.swift */,
+				7FCAD9772E4C474000716B40 /* SystemDashboardRouter.swift */,
+				7FCAD9782E4C474000716B40 /* SystemDashboardViewController.swift */,
+			);
+			path = SystemDashboardRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD97E2E4C474000716B40 /* UserManagementRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD97A2E4C474000716B40 /* UserManagementBuilder.swift */,
+				7FCAD97B2E4C474000716B40 /* UserManagementInteractor.swift */,
+				7FCAD97C2E4C474000716B40 /* UserManagementRouter.swift */,
+				7FCAD97D2E4C474000716B40 /* UserManagementViewController.swift */,
+			);
+			path = UserManagementRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9832E4C474000716B40 /* AdminRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9742E4C474000716B40 /* AllBoardsManagementRIB */,
+				7FCAD9792E4C474000716B40 /* SystemDashboardRIB */,
+				7FCAD97E2E4C474000716B40 /* UserManagementRIB */,
+				7FCAD97F2E4C474000716B40 /* AdminBuilder.swift */,
+				7FCAD9802E4C474000716B40 /* AdminInteractor.swift */,
+				7FCAD9812E4C474000716B40 /* AdminRouter.swift */,
+				7FCAD9822E4C474000716B40 /* AdminViewController.swift */,
+			);
+			path = AdminRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9982E4C475400716B40 /* LoginRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9942E4C475400716B40 /* LoginBuilder.swift */,
+				7FCAD9952E4C475400716B40 /* LoginInteractor.swift */,
+				7FCAD9962E4C475400716B40 /* LoginRouter.swift */,
+				7FCAD9972E4C475400716B40 /* LoginViewController.swift */,
+			);
+			path = LoginRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD99D2E4C475400716B40 /* RoleSelectionRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9992E4C475400716B40 /* RoleSelectionBuilder.swift */,
+				7FCAD99A2E4C475400716B40 /* RoleSelectionInteractor.swift */,
+				7FCAD99B2E4C475400716B40 /* RoleSelectionRouter.swift */,
+				7FCAD99C2E4C475400716B40 /* RoleSelectionViewController.swift */,
+			);
+			path = RoleSelectionRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9A22E4C475400716B40 /* StudentLoginRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD99E2E4C475400716B40 /* StudentLoginBuilder.swift */,
+				7FCAD99F2E4C475400716B40 /* StudentLoginInteractor.swift */,
+				7FCAD9A02E4C475400716B40 /* StudentLoginRouter.swift */,
+				7FCAD9A12E4C475400716B40 /* StudentLoginViewController.swift */,
+			);
+			path = StudentLoginRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9A72E4C475400716B40 /* AuthRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9982E4C475400716B40 /* LoginRIB */,
+				7FCAD99D2E4C475400716B40 /* RoleSelectionRIB */,
+				7FCAD9A22E4C475400716B40 /* StudentLoginRIB */,
+				7FCAD9A32E4C475400716B40 /* AuthBuilder.swift */,
+				7FCAD9A42E4C475400716B40 /* AuthInteractor.swift */,
+				7FCAD9A52E4C475400716B40 /* AuthRouter.swift */,
+				7FCAD9A62E4C475400716B40 /* AuthViewController.swift */,
+			);
+			path = AuthRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9AB2E4C475400716B40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9A92E4C475400716B40 /* AppConfig.json */,
+				7FCAD9AA2E4C475400716B40 /* firestore.indexes.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7FCAD9B02E4C475400716B40 /* RootRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9AC2E4C475400716B40 /* RootBuilder.swift */,
+				7FCAD9AD2E4C475400716B40 /* RootInteractor.swift */,
+				7FCAD9AE2E4C475400716B40 /* RootRouter.swift */,
+				7FCAD9AF2E4C475400716B40 /* RootViewController.swift */,
+			);
+			path = RootRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9BA2E4C475400716B40 /* MyPhotosRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9B62E4C475400716B40 /* MyPhotosBuilder.swift */,
+				7FCAD9B72E4C475400716B40 /* MyPhotosInteractor.swift */,
+				7FCAD9B82E4C475400716B40 /* MyPhotosRouter.swift */,
+				7FCAD9B92E4C475400716B40 /* MyPhotosViewController.swift */,
+			);
+			path = MyPhotosRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9BF2E4C475400716B40 /* PhotoUploadRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9BB2E4C475400716B40 /* PhotoUploadBuilder.swift */,
+				7FCAD9BC2E4C475400716B40 /* PhotoUploadInteractor.swift */,
+				7FCAD9BD2E4C475400716B40 /* PhotoUploadRouter.swift */,
+				7FCAD9BE2E4C475400716B40 /* PhotoUploadViewController.swift */,
+			);
+			path = PhotoUploadRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9C42E4C475400716B40 /* QRScannerRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9C02E4C475400716B40 /* QRScannerBuilder.swift */,
+				7FCAD9C12E4C475400716B40 /* QRScannerInteractor.swift */,
+				7FCAD9C22E4C475400716B40 /* QRScannerRouter.swift */,
+				7FCAD9C32E4C475400716B40 /* QRScannerViewController.swift */,
+			);
+			path = QRScannerRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9C92E4C475400716B40 /* StudentRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FB362392E4D53C40088852E /* BoardJoinRIB */,
+				7FB3623E2E4D53C40088852E /* MyParticipationsRIB */,
+				7FCAD9BA2E4C475400716B40 /* MyPhotosRIB */,
+				7FCAD9BF2E4C475400716B40 /* PhotoUploadRIB */,
+				7FCAD9C42E4C475400716B40 /* QRScannerRIB */,
+				7FCAD9C52E4C475400716B40 /* StudentBuilder.swift */,
+				7FCAD9C62E4C475400716B40 /* StudentInteractor.swift */,
+				7FCAD9C72E4C475400716B40 /* StudentRouter.swift */,
+				7FCAD9C82E4C475400716B40 /* StudentViewController.swift */,
+			);
+			path = StudentRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9CE2E4C475400716B40 /* BoardCreationRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9CA2E4C475400716B40 /* BoardCreationBuilder.swift */,
+				7FCAD9CB2E4C475400716B40 /* BoardCreationInteractor.swift */,
+				7FCAD9CC2E4C475400716B40 /* BoardCreationRouter.swift */,
+				7FCAD9CD2E4C475400716B40 /* BoardCreationViewController.swift */,
+			);
+			path = BoardCreationRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9D32E4C475400716B40 /* BoardSettingsRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9CF2E4C475400716B40 /* BoardSettingsBuilder.swift */,
+				7FCAD9D02E4C475400716B40 /* BoardSettingsInteractor.swift */,
+				7FCAD9D12E4C475400716B40 /* BoardSettingsRouter.swift */,
+				7FCAD9D22E4C475400716B40 /* BoardSettingsViewController.swift */,
+			);
+			path = BoardSettingsRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9D82E4C475400716B40 /* PhotoModerationRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9D42E4C475400716B40 /* PhotoModerationBuilder.swift */,
+				7FCAD9D52E4C475400716B40 /* PhotoModerationInteractor.swift */,
+				7FCAD9D62E4C475400716B40 /* PhotoModerationRouter.swift */,
+				7FCAD9D72E4C475400716B40 /* PhotoModerationViewController.swift */,
+			);
+			path = PhotoModerationRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9DD2E4C475400716B40 /* StudentManagementRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9D92E4C475400716B40 /* StudentManagementBuilder.swift */,
+				7FCAD9DA2E4C475400716B40 /* StudentManagementInteractor.swift */,
+				7FCAD9DB2E4C475400716B40 /* StudentManagementRouter.swift */,
+				7FCAD9DC2E4C475400716B40 /* StudentManagementViewController.swift */,
+			);
+			path = StudentManagementRIB;
+			sourceTree = "<group>";
+		};
+		7FCAD9E22E4C475400716B40 /* TeacherRIB */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAD9CE2E4C475400716B40 /* BoardCreationRIB */,
+				7FCAD9D32E4C475400716B40 /* BoardSettingsRIB */,
+				7FCAD9D82E4C475400716B40 /* PhotoModerationRIB */,
+				7FCAD9DD2E4C475400716B40 /* StudentManagementRIB */,
+				7FCAD9DE2E4C475400716B40 /* TeacherBuilder.swift */,
+				7FCAD9DF2E4C475400716B40 /* TeacherInteractor.swift */,
+				7FCAD9E02E4C475400716B40 /* TeacherRouter.swift */,
+				7FCAD9E12E4C475400716B40 /* TeacherViewController.swift */,
+			);
+			path = TeacherRIB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		073 /* WallyHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 074 /* Build configuration list for PBXNativeTarget "WallyHub" */;
+			buildPhases = (
+				075 /* Sources */,
+				061 /* Frameworks */,
+				076 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WallyHub;
+			packageProductDependencies = (
+				052 /* RIBs */,
+				054 /* FirebaseAuth */,
+				056 /* FirebaseFirestore */,
+				058 /* FirebaseStorage */,
+				7FC313C42E52B9010025A702 /* FirebaseRemoteConfig */,
+			);
+			productName = WallyHub;
+			productReference = 059 /* WallyHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					073 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 078 /* Build configuration list for PBXProject "WallyHub" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 062;
+			packageReferences = (
+				079 /* XCRemoteSwiftPackageReference "RIBs" */,
+				080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				073 /* WallyHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043 /* Assets.xcassets in Resources */,
+				045 /* GoogleService-Info.plist in Resources */,
+				7FCADA1F2E4C475400716B40 /* AppConfig.json in Resources */,
+				7FCADA202E4C475400716B40 /* firestore.indexes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001 /* WallyHubApp.swift in Sources */,
+				7FCAD9622E4C471400716B40 /* UserRole.swift in Sources */,
+				7FCAD9632E4C471400716B40 /* ConfigurationManager.swift in Sources */,
+				7FCAD9E32E4C475400716B40 /* StudentLoginRouter.swift in Sources */,
+				7FCAD9E42E4C475400716B40 /* MyPhotosBuilder.swift in Sources */,
+				7FCAD9E52E4C475400716B40 /* QRScannerViewController.swift in Sources */,
+				7FCCF6592E5206330017B882 /* PhotoViewTracking.swift in Sources */,
+				7FCAD9E62E4C475400716B40 /* BoardCreationBuilder.swift in Sources */,
+				7FCAD9E72E4C475400716B40 /* BoardSettingsBuilder.swift in Sources */,
+				7FCAD9E82E4C475400716B40 /* PhotoModerationBuilder.swift in Sources */,
+				7FCAD9E92E4C475400716B40 /* TeacherRouter.swift in Sources */,
+				7FC313C22E52B8BD0025A702 /* AuthenticationService.swift in Sources */,
+				7FCAD9EA2E4C475400716B40 /* PhotoUploadRouter.swift in Sources */,
+				7FCAD9EB2E4C475400716B40 /* RootViewController.swift in Sources */,
+				7FCAD9EC2E4C475400716B40 /* PhotoModerationViewController.swift in Sources */,
+				7FCAD9ED2E4C475400716B40 /* QRScannerBuilder.swift in Sources */,
+				7FCAD9EE2E4C475400716B40 /* BoardSettingsRouter.swift in Sources */,
+				7FCAD9EF2E4C475400716B40 /* BoardSettingsInteractor.swift in Sources */,
+				7FCAD9F02E4C475400716B40 /* RoleSelectionRouter.swift in Sources */,
+				7FCAD9F12E4C475400716B40 /* RootRouter.swift in Sources */,
+				7FCAD9F22E4C475400716B40 /* RoleSelectionBuilder.swift in Sources */,
+				7FCAD9F32E4C475400716B40 /* StudentManagementInteractor.swift in Sources */,
+				7FB3623F2E4D53C40088852E /* BoardJoinRouter.swift in Sources */,
+				7FB362402E4D53C40088852E /* MyParticipationsRouter.swift in Sources */,
+				7FB362412E4D53C40088852E /* MyParticipationsBuilder.swift in Sources */,
+				7FB362422E4D53C40088852E /* MyParticipationsViewController.swift in Sources */,
+				7FB362432E4D53C40088852E /* BoardJoinInteractor.swift in Sources */,
+				7FB362442E4D53C40088852E /* MyParticipationsInteractor.swift in Sources */,
+				7FB362452E4D53C40088852E /* BoardJoinViewController.swift in Sources */,
+				7FB362462E4D53C40088852E /* BoardJoinBuilder.swift in Sources */,
+				7FCCF65D2E5208000017B882 /* PhotoStatusIndicator.swift in Sources */,
+				7FCAD9F42E4C475400716B40 /* MyPhotosViewController.swift in Sources */,
+				7FCAD9F62E4C475400716B40 /* LoginBuilder.swift in Sources */,
+				7FCAD9F72E4C475400716B40 /* QRScannerInteractor.swift in Sources */,
+				7FCAD9F82E4C475400716B40 /* RoleSelectionViewController.swift in Sources */,
+				7FCAD9F92E4C475400716B40 /* StudentManagementViewController.swift in Sources */,
+				7FCAD9FA2E4C475400716B40 /* AuthInteractor.swift in Sources */,
+				7FCAD9FB2E4C475400716B40 /* BoardCreationViewController.swift in Sources */,
+				7FCAD9FC2E4C475400716B40 /* TeacherViewController.swift in Sources */,
+				7FCAD9FE2E4C475400716B40 /* BoardCreationRouter.swift in Sources */,
+				7FCAD9FF2E4C475400716B40 /* StudentLoginViewController.swift in Sources */,
+				7FCADA002E4C475400716B40 /* RootInteractor.swift in Sources */,
+				7FCADA012E4C475400716B40 /* TeacherInteractor.swift in Sources */,
+				7FB362342E4D49370088852E /* ModernActionCard.swift in Sources */,
+				7FCADA022E4C475400716B40 /* PhotoUploadBuilder.swift in Sources */,
+				7FCADA032E4C475400716B40 /* StudentLoginInteractor.swift in Sources */,
+				7FCADA042E4C475400716B40 /* StudentManagementBuilder.swift in Sources */,
+				7FCADA052E4C475400716B40 /* StudentManagementRouter.swift in Sources */,
+				7FCADA062E4C475400716B40 /* MyPhotosInteractor.swift in Sources */,
+				7FCADA082E4C475400716B40 /* QRScannerRouter.swift in Sources */,
+				7FCADA092E4C475400716B40 /* PhotoModerationRouter.swift in Sources */,
+				7FCADA0A2E4C475400716B40 /* StudentLoginBuilder.swift in Sources */,
+				7FC313BA2E52B6AC0025A702 /* RemoteConfigService.swift in Sources */,
+				7FCADA0B2E4C475400716B40 /* BoardSettingsViewController.swift in Sources */,
+				7FCADA0C2E4C475400716B40 /* LoginInteractor.swift in Sources */,
+				7FCADA0D2E4C475400716B40 /* PhotoUploadViewController.swift in Sources */,
+				7FCADA0E2E4C475400716B40 /* PhotoUploadInteractor.swift in Sources */,
+				7FCCF65B2E5206470017B882 /* PhotoViewTrackingService.swift in Sources */,
+				7FCADA0F2E4C475400716B40 /* StudentInteractor.swift in Sources */,
+				7FCADA102E4C475400716B40 /* MyPhotosRouter.swift in Sources */,
+				7FCADA112E4C475400716B40 /* RoleSelectionInteractor.swift in Sources */,
+				7FCADA132E4C475400716B40 /* AuthViewController.swift in Sources */,
+				7FCADA142E4C475400716B40 /* AuthRouter.swift in Sources */,
+				7FCADA152E4C475400716B40 /* StudentBuilder.swift in Sources */,
+				7FCADA162E4C475400716B40 /* LoginRouter.swift in Sources */,
+				7FCADA172E4C475400716B40 /* AuthBuilder.swift in Sources */,
+				7FCADA182E4C475400716B40 /* BoardCreationInteractor.swift in Sources */,
+				7FCADA192E4C475400716B40 /* TeacherBuilder.swift in Sources */,
+				7FCADA1A2E4C475400716B40 /* RootBuilder.swift in Sources */,
+				7FCADA1B2E4C475400716B40 /* LoginViewController.swift in Sources */,
+				7FCADA1C2E4C475400716B40 /* StudentRouter.swift in Sources */,
+				7FCADA1D2E4C475400716B40 /* StudentViewController.swift in Sources */,
+				7FCADA1E2E4C475400716B40 /* PhotoModerationInteractor.swift in Sources */,
+				7FCAD9642E4C471400716B40 /* Photo.swift in Sources */,
+				7FCAD9652E4C471400716B40 /* RoleCard.swift in Sources */,
+				7FCAD9662E4C471400716B40 /* ServiceFactory.swift in Sources */,
+				7FCAD9672E4C471400716B40 /* WallyError.swift in Sources */,
+				7FCAD9682E4C471400716B40 /* StudentService.swift in Sources */,
+				7FCAD9692E4C471400716B40 /* AuthenticationService.swift in Sources */,
+				7FCAD96A2E4C471400716B40 /* PhotoService.swift in Sources */,
+				7FCAD96B2E4C471400716B40 /* BoardService.swift in Sources */,
+				7FCAD96C2E4C471400716B40 /* Teacher.swift in Sources */,
+				7FCAD96D2E4C471400716B40 /* Student.swift in Sources */,
+				7FCAD96E2E4C471400716B40 /* Board.swift in Sources */,
+				7FCAD96F2E4C471400716B40 /* Administrator.swift in Sources */,
+				7FB362492E4D627C0088852E /* ModernLoadingView.swift in Sources */,
+				7FB3624A2E4D627C0088852E /* ModernErrorView.swift in Sources */,
+				7FCAD9842E4C474000716B40 /* SystemDashboardRouter.swift in Sources */,
+				7FC313BE2E52B86D0025A702 /* RemoteConfigDebugHelper.swift in Sources */,
+				7FC313BF2E52B86D0025A702 /* EnvironmentLoader.swift in Sources */,
+				7FC313C02E52B86D0025A702 /* SwiftUIExtensions.swift in Sources */,
+				7FCAD9852E4C474000716B40 /* AdminBuilder.swift in Sources */,
+				7FCAD9862E4C474000716B40 /* AllBoardsManagementRouter.swift in Sources */,
+				7FCAD9872E4C474000716B40 /* AllBoardsManagementInteractor.swift in Sources */,
+				7FCAD9882E4C474000716B40 /* AdminRouter.swift in Sources */,
+				7FCAD9892E4C474000716B40 /* AdminInteractor.swift in Sources */,
+				7FCAD98A2E4C474000716B40 /* AllBoardsManagementViewController.swift in Sources */,
+				7FCAD98B2E4C474000716B40 /* SystemDashboardInteractor.swift in Sources */,
+				7FCAD98C2E4C474000716B40 /* UserManagementRouter.swift in Sources */,
+				7FCAD98D2E4C474000716B40 /* AllBoardsManagementBuilder.swift in Sources */,
+				7FCAD98E2E4C474000716B40 /* SystemDashboardViewController.swift in Sources */,
+				7FCAD98F2E4C474000716B40 /* SystemDashboardBuilder.swift in Sources */,
+				7FCAD9902E4C474000716B40 /* AdminViewController.swift in Sources */,
+				7FCAD9912E4C474000716B40 /* UserManagementInteractor.swift in Sources */,
+				7FCAD9922E4C474000716B40 /* UserManagementViewController.swift in Sources */,
+				7FCAD9932E4C474000716B40 /* UserManagementBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S92DA69A6X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S92DA69A6X;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WallyHub/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallyhub.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WallyHub/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallyhub.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		074 /* Build configuration list for PBXNativeTarget "WallyHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083 /* Debug */,
+				084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078 /* Build configuration list for PBXProject "WallyHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081 /* Debug */,
+				082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		079 /* XCRemoteSwiftPackageReference "RIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/RIBs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		052 /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 079 /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+		054 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		056 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		058 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		7FC313C42E52B9010025A702 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 077 /* Project object */;
+}
