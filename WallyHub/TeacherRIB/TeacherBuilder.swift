@@ -44,21 +44,28 @@ final class TeacherBuilder: Builder<TeacherDependency>, TeacherBuildable {
     }
 
     func build(withListener listener: TeacherListener) -> TeacherRouting {
+        print("🔨 TeacherBuilder: build 시작")
+        
         let component = TeacherComponent(dependency: dependency)
+        print("✅ TeacherBuilder: Component 생성 완료")
+        
         let viewController = TeacherViewController()
+        print("✅ TeacherBuilder: ViewController 생성 완료")
+        
         let interactor = TeacherInteractor(
             presenter: viewController, 
             authenticationService: dependency.authenticationService,
             boardService: dependency.boardService
         )
         interactor.listener = listener
+        print("✅ TeacherBuilder: Interactor 생성 완료")
         
         let boardCreationBuilder = BoardCreationBuilder(dependency: component)
         let studentManagementBuilder = StudentManagementBuilder(dependency: component)
         let photoModerationBuilder = PhotoModerationBuilder(dependency: component)
         let boardSettingsBuilder = BoardSettingsBuilder(dependency: component)
         
-        return TeacherRouter(
+        let router = TeacherRouter(
             interactor: interactor,
             viewController: viewController,
             boardCreationBuilder: boardCreationBuilder,
@@ -66,5 +73,10 @@ final class TeacherBuilder: Builder<TeacherDependency>, TeacherBuildable {
             photoModerationBuilder: photoModerationBuilder,
             boardSettingsBuilder: boardSettingsBuilder
         )
+        
+        print("✅ TeacherBuilder: Router 생성 완료")
+        print("🎯 TeacherBuilder: build 완료 - TeacherRIB 생성됨")
+        
+        return router
     }
 }

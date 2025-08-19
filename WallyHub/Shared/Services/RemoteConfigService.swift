@@ -1,6 +1,36 @@
 import Foundation
 import FirebaseRemoteConfig
 import FirebaseCore
+
+// MARK: - Timeout Functions
+func withTimeout<T>(
+    seconds: TimeInterval,
+    operation: @escaping () async throws -> T
+) async throws -> T {
+    return try await withThrowingTaskGroup(of: T.self) { group in
+        group.addTask {
+            try await operation()
+        }
+        
+        group.addTask {
+            try await Task.sleep(for: .seconds(seconds))
+            throw TimeoutError()
+        }
+        
+        guard let result = try await group.next() else {
+            throw TimeoutError()
+        }
+        
+        group.cancelAll()
+        return result
+    }
+}
+
+struct TimeoutError: Error, LocalizedError {
+    var errorDescription: String? {
+        return "작업이 시간 초과되었습니다."
+    }
+}
 import Combine
 
 // MARK: - Remote Config Keys
@@ -71,8 +101,10 @@ public class FirebaseRemoteConfigService: RemoteConfigService, ObservableObject 
             // 캐시 시간 초기화하여 강제로 새로 가져오기
             userDefaults.removeObject(forKey: CacheKeys.lastFetchTime)
             
-            // Remote Config에서 최신 설정 가져오기 (캐시 무시)
-            let status = try await remoteConfig.fetch(withExpirationDuration: 0)
+            // Remote Config에서 최신 설정 가져오기 (5초 타임아웃)
+            let status = try await withTimeout(seconds: 5) {
+                return try await self.remoteConfig.fetch(withExpirationDuration: 60)
+            }
             print("📡 Remote Config 강제 패치 상태: \(status)")
             
             let activated = try await remoteConfig.activate()
@@ -128,8 +160,10 @@ public class FirebaseRemoteConfigService: RemoteConfigService, ObservableObject 
                 }
             }
             
-            // Remote Config에서 최신 설정 가져오기
-            let status = try await remoteConfig.fetch(withExpirationDuration: 0)
+            // Remote Config에서 최신 설정 가져오기 (5초 타임아웃)
+            let status = try await withTimeout(seconds: 5) {
+                return try await self.remoteConfig.fetch(withExpirationDuration: 60)
+            }
             print("📡 Remote Config 패치 상태: \(status)")
             
             let activated = try await remoteConfig.activate()

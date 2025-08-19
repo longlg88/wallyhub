@@ -57,7 +57,9 @@ final class AuthInteractor: PresentableInteractor<AuthPresentable>, AuthInteract
     
     func loginDidComplete(user: User) {
         // Teacher/Admin login completed with user information
+        print("🎯 AuthInteractor: loginDidComplete 받음 - user: \(user.username), role: \(user.role.displayName)")
         listener?.authDidComplete(userRole: user.role, student: nil)
+        print("✅ AuthInteractor: authDidComplete 호출 완료 - role: \(user.role.displayName)")
     }
     
     func loginDidRequestBack() {

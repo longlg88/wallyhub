@@ -97,14 +97,28 @@ final class RootRouter: ViewableRouter<RootInteractable, RootViewControllable>, 
     }
     
     func routeToTeacher() {
+        print("🎯 RootRouter: Teacher 라우팅 시작")
+        
         dismissCurrentChild()
+        print("✅ RootRouter: dismissCurrentChild 완료")
         
-        guard teacherRouter == nil else { return }
+        guard teacherRouter == nil else { 
+            print("⚠️ RootRouter: teacherRouter가 이미 존재함, 라우팅 취소")
+            return 
+        }
         
+        print("🔨 RootRouter: TeacherRIB 빌드 시작")
         let router = teacherBuilder.build(withListener: interactor)
         teacherRouter = router
+        print("✅ RootRouter: TeacherRIB 빌드 완료")
+        
+        print("🔗 RootRouter: TeacherRIB attach 시작")
         attachChild(router)
+        print("✅ RootRouter: TeacherRIB attach 완료")
+        
+        print("📺 RootRouter: Teacher 화면 표시 시작")
         viewController.present(viewController: router.viewControllable)
+        print("✅ RootRouter: Teacher 화면 표시 완료")
     }
     
     func routeToAdmin() {
@@ -121,31 +135,51 @@ final class RootRouter: ViewableRouter<RootInteractable, RootViewControllable>, 
     private func dismissCurrentChild() {
         print("🧹 RootRouter: dismissCurrentChild() 시작")
         
+        var childrenCleared = false
+        
         if let router = authRouter {
             print("🗑️ RootRouter: AuthRouter 정리 중")
             detachChild(router)
             authRouter = nil
             viewController.dismiss()
             print("✅ RootRouter: AuthRouter 정리 완료")
-        } else if let router = studentRouter {
+            childrenCleared = true
+        }
+        
+        if let router = studentRouter {
             print("🗑️ RootRouter: StudentRouter 정리 중")
             detachChild(router)
             studentRouter = nil
-            viewController.dismiss()
+            if !childrenCleared {
+                viewController.dismiss()
+            }
             print("✅ RootRouter: StudentRouter 정리 완료")
-        } else if let router = teacherRouter {
+            childrenCleared = true
+        }
+        
+        if let router = teacherRouter {
             print("🗑️ RootRouter: TeacherRouter 정리 중")
             detachChild(router)
             teacherRouter = nil
-            viewController.dismiss()
+            if !childrenCleared {
+                viewController.dismiss()
+            }
             print("✅ RootRouter: TeacherRouter 정리 완료")
-        } else if let router = adminRouter {
+            childrenCleared = true
+        }
+        
+        if let router = adminRouter {
             print("🗑️ RootRouter: AdminRouter 정리 중")
             detachChild(router)
             adminRouter = nil
-            viewController.dismiss()
+            if !childrenCleared {
+                viewController.dismiss()
+            }
             print("✅ RootRouter: AdminRouter 정리 완료")
-        } else {
+            childrenCleared = true
+        }
+        
+        if !childrenCleared {
             print("ℹ️ RootRouter: 정리할 자식 라우터가 없음")
         }
         

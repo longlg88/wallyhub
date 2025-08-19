@@ -79,7 +79,9 @@ final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInter
                 await MainActor.run { [weak self] in
                     guard let self = self else { return }
                     self.presenter.hideLoading()
+                    print("🎯 LoginInteractor: loginDidComplete 호출 - user: \(user.username), role: \(user.role.displayName)")
                     self.listener?.loginDidComplete(user: user)
+                    print("✅ LoginInteractor: loginDidComplete 호출 완료")
                 }
             } catch {
                 await MainActor.run { [weak self] in
@@ -106,7 +108,9 @@ final class LoginInteractor: PresentableInteractor<LoginPresentable>, LoginInter
                 await MainActor.run { [weak self] in
                     guard let self = self else { return }
                     self.presenter.hideLoading()
+                    print("🎯 LoginInteractor: loginDidComplete 호출 - user: \(user.username), role: \(user.role.displayName)")
                     self.listener?.loginDidComplete(user: user)
+                    print("✅ LoginInteractor: loginDidComplete 호출 완료")
                 }
             } catch {
                 await MainActor.run { [weak self] in

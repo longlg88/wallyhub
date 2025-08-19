@@ -39,15 +39,29 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override func didBecomeActive() {
         super.didBecomeActive()
         
-        // Check if user is already authenticated
-        let isLoggedIn = authenticationService.isLoggedIn()
-        print("🔍 RootInteractor.didBecomeActive - isLoggedIn: \(isLoggedIn)")
+        // 인증 상태를 안전하게 확인하고 네비게이션
+        Task { @MainActor in
+            await checkAuthenticationAndNavigate()
+        }
+    }
+    
+    @MainActor
+    private func checkAuthenticationAndNavigate() async {
+        // Firebase Auth 상태가 안정화될 때까지 짧은 딜레이
+        try? await Task.sleep(for: .milliseconds(100))
         
-        if isLoggedIn {
-            print("✅ User is logged in, routing to role-based screen")
+        let isLoggedIn = authenticationService.isLoggedIn()
+        let currentUser = authenticationService.getCurrentUser()
+        
+        print("🔍 RootInteractor 인증 상태 확인:")
+        print("   isLoggedIn: \(isLoggedIn)")
+        print("   currentUser: \(currentUser?.username ?? "없음")")
+        
+        if isLoggedIn, let user = currentUser {
+            print("✅ 인증된 사용자 있음 - 역할별 화면으로 이동: \(user.role.displayName)")
             routeToRoleBased()
         } else {
-            print("🔓 User is not logged in, routing to auth screen")
+            print("🔓 인증되지 않은 상태 - Auth 화면으로 이동")
             router?.routeToAuth()
         }
     }
@@ -75,6 +89,8 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     // MARK: - AuthListener
     
     func authDidComplete(userRole: UserRole, student: Student?) {
+        print("🎯 RootInteractor: authDidComplete 받음 - role: \(userRole.displayName)")
+        
         switch userRole {
         case .student:
             if let student = student {
@@ -85,9 +101,13 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
                 router?.routeToStudent()
             }
         case .teacher:
-            router?.routeToTeacher() 
+            print("🎯 RootInteractor: Teacher으로 라우팅 시작")
+            router?.routeToTeacher()
+            print("✅ RootInteractor: Teacher 라우팅 완료")
         case .administrator:
+            print("🎯 RootInteractor: Admin으로 라우팅 시작")
             router?.routeToAdmin()
+            print("✅ RootInteractor: Admin 라우팅 완료")
         }
     }
 }
@@ -106,7 +126,18 @@ extension RootInteractor: StudentListener {
 
 extension RootInteractor: TeacherListener {
     func teacherDidRequestSignOut() {
-        router?.routeToAuth()
+        print("🚪 교사 로그아웃 요청 받음")
+        Task { @MainActor in
+            do {
+                print("🔄 AuthenticationService.logout() 호출")
+                try await authenticationService.logout()
+                print("✅ 로그아웃 완료 - Auth 화면으로 이동")
+                router?.routeToAuth()
+            } catch {
+                print("❌ 로그아웃 실패: \(error) - 강제로 Auth 화면 이동")
+                router?.routeToAuth()
+            }
+        }
     }
     
     func teacherDidCompleteFlow() {
@@ -116,7 +147,18 @@ extension RootInteractor: TeacherListener {
 
 extension RootInteractor: AdminListener {
     func adminDidRequestSignOut() {
-        router?.routeToAuth()
+        print("🚪 관리자 로그아웃 요청 받음")
+        Task { @MainActor in
+            do {
+                print("🔄 AuthenticationService.logout() 호출")
+                try await authenticationService.logout()
+                print("✅ 로그아웃 완료 - Auth 화면으로 이동")
+                router?.routeToAuth()
+            } catch {
+                print("❌ 로그아웃 실패: \(error) - 강제로 Auth 화면 이동")
+                router?.routeToAuth()
+            }
+        }
     }
     
     func adminDidCompleteFlow() {

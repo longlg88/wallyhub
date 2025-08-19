@@ -121,10 +121,19 @@ public class FirebaseAuthenticationService: AuthenticationService, ObservableObj
             throw WallyError.authenticationFailed
         }
         
-        // Remote Config를 강제로 새로고침하여 최신 값 확보
-        print("🔄 Remote Config 강제 새로고침 중...")
-        try await remoteConfigService.forceRefresh()
-        print("✅ Remote Config 새로고침 완료")
+        // Remote Config 로딩 확인 (블로킹하지 않음)
+        print("🔄 Remote Config 상태 확인 중...")
+        
+        // 백그라운드에서 Remote Config 새로고침 (로그인 블로킹하지 않음)
+        Task.detached { [weak self] in
+            try? await self?.remoteConfigService.loadConfiguration()
+        }
+        
+        // 현재 로드된 상태로 진행 (캐시된 값 사용)
+        if !remoteConfigService.isConfigurationLoaded {
+            print("⚠️ Remote Config 아직 로드되지 않음 - 기본값 사용")
+        }
+        print("✅ Remote Config 상태 확인 완료")
         
         // 입력 검증
         try validateLoginInput(username: username, password: password)
@@ -161,8 +170,9 @@ public class FirebaseAuthenticationService: AuthenticationService, ObservableObj
                 throw WallyError.authenticationFailed
             }
             
-            // 현재 사용자 설정
-            await MainActor.run {
+            // 현재 사용자 설정 (메모리 안전)
+            await MainActor.run { [weak self] in
+                guard let self = self else { return }
                 print("🔄 로그인 성공 - 인증 상태 업데이트 시작")
                 print("🔄 이전 상태: isAuthenticated = \(self.isAuthenticated), currentUser = \(self.currentUser?.username ?? "없음")")
                 
