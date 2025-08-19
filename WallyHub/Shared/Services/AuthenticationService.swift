@@ -121,6 +121,11 @@ public class FirebaseAuthenticationService: AuthenticationService, ObservableObj
             throw WallyError.authenticationFailed
         }
         
+        // Remote Config를 강제로 새로고침하여 최신 값 확보
+        print("🔄 Remote Config 강제 새로고침 중...")
+        try await remoteConfigService.forceRefresh()
+        print("✅ Remote Config 새로고침 완료")
+        
         // 입력 검증
         try validateLoginInput(username: username, password: password)
         
